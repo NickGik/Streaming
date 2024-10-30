@@ -1,0 +1,21 @@
+/* Sidebar.css */
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .sidebar__menu li button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .sidebar__menu li svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .sidebar__playlist {
+    margin-top: 50px;
+  }

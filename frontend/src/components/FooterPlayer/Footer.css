@@ -1,0 +1,178 @@
+/* Footer.css */
+
+.footer-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Блок информации о треке */
+  .track-info {
+    display: flex;
+    align-items: center;
+
+    .album-art {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .song-details {
+      display: flex;
+      flex-direction: column;
+
+      .song-name {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2px; 
+      }
+
+      .artist-name {
+        font-size: 12px;
+        color: #757575;
+      }
+
+      .song-details-span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  /* Блок управления воспроизведением */
+  .controls {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    button {
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      margin: 0 5px; 
+
+      svg {
+        fill: #757575; 
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Стили для hover состояния */
+      &:hover svg {
+        fill: #FC6D3E;
+      }
+    }
+  }
+
+  /* Полоса прокрутки */
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    .current-time, 
+    .total-duration {
+      font-size: 12px;
+      color: #757575;
+      margin: 0 10px;
+    }
+
+    .progress-background {
+      background-color: #e0e0e0;
+      height: 2px;
+      border-radius: 1px;
+      cursor: pointer;
+      flex-grow: 1; /* Заполняем доступное пространство */
+      position: relative;
+    }
+
+    .progress { /* Добавляем новый элемент для отображения прогресса */
+      height: 2px;
+      background-color: #FC6D3E; /* Оранжевый цвет */
+      border-radius: 1px;
+      width: 0%; /* Изначально ширина 0% */
+      z-index: 1; 
+    }
+
+    .progress-input {
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent; 
+      outline: none;
+      cursor: pointer; 
+      position: absolute;
+      top: -4px;
+    }
+
+    .progress-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #FC6D3E;
+      cursor: pointer;
+    }
+  }
+
+  /* Регулятор громкости */
+  .volume-control {
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: #757575;
+      margin-right: 5px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .volume-background {  
+      width: 60px;
+      height: 2px;
+      background-color: #e0e0e0;
+      border-radius: 1px;
+      position: relative;
+    }
+
+    .volume-progress { 
+      height: 2px;
+      background-color: #FC6D3E;
+      border-radius: 1px;
+      width: 0%; 
+    }
+
+    .volume-input {
+      -webkit-appearance: none;
+      width: 100%;  
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      top: -6px; 
+    }
+
+    .volume-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FC6D3E;
+      cursor: pointer;
+    }
+  }
+}

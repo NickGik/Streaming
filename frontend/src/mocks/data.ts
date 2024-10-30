@@ -1,0 +1,182 @@
+import { Artist, Album, Song, Playlist, User } from '../models/interfaces';
+
+export const mockArtists: Artist[] = [
+  {
+    id: 1,
+    name: 'Nirvana',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    albums: ['Nirvana'],
+    likes: [],
+  },
+  {
+    id: 2,
+    name: 'Adele',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    albums: ['30'],
+    likes: [],
+  },
+  {
+    id: 3,
+    name: 'Coolio',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    albums: ["Gangsta's Paradise"],
+    likes: [],
+  },
+  {
+    id: 4,
+    name: 'ABBA',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    albums: ['Summer'],
+    likes: [],
+  },
+];
+
+export const mockAlbums: Album[] = [
+  {
+    id: 1,
+    name: 'Nirvana',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    songs: [],
+    artist: [mockArtists[0]],
+    likes: [],
+  },
+  {
+    id: 2,
+    name: '30',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    songs: [],
+    artist: [mockArtists[1]],
+    likes: [],
+  },
+  {
+    id: 3,
+    name: "Gangsta's Paradise",
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    songs: [],
+    artist: [mockArtists[2]],
+    likes: [],
+  },
+  {
+    id: 4,
+    name: 'Summer',
+    image: 'img/artist.jpg',
+    createdAt: '2024-08-11T09:06:43.445Z',
+    songs: [],
+    artist: [mockArtists[3]],
+    likes: [],
+  },
+];
+
+export const mockTracks: Song[] = [
+  {
+    id: 1,
+    name: 'In Bloom',
+    filename: 'Nirvana_-_In_Bloom.mp3',
+    path: '/music/Nirvana_-_In_Bloom.mp3',
+    image: 'img/tracks (1).jpg',
+    duration: 335, // в секундах
+    createdAt: '2023-10-26T12:00:00.000Z',
+    album: mockAlbums[0],
+    artist: mockArtists[0],
+    playlists: [],
+    added: '6 дней назад',
+    likes: [],
+  },
+  {
+    id: 2,
+    name: 'Easy On Me',
+    filename: 'Adele_-_Easy_On_Me.mp3',
+    path: '/music/Adele_-_Easy_On_Me.mp3',
+    image: 'img/tracks (2).jpg',
+    duration: 240,
+    createdAt: '2023-10-27T12:00:00.000Z',
+    album: mockAlbums[1],
+    artist: mockArtists[1],
+    playlists: [],
+    added: '7 дней назад',
+    likes: [],
+  },
+  {
+    id: 3,
+    name: "Gangsta's Paradise",
+    filename: 'gangstas_paradise.mp3',
+    path: '/music/gangstas_paradise.mp3',
+    image: 'img/tracks (3).jpg',
+    duration: 240, 
+    createdAt: '2023-10-25T12:00:00.000Z',
+    album: mockAlbums[2],
+    artist: mockArtists[2],
+    playlists: [],
+    added: '5 дней назад',
+    likes: [],
+  },
+  {
+    id: 4,
+    name: 'The Winner Takes It All',
+    filename: 'the_winner_takes_it_all.mp3',
+    path: '/music/the_winner_takes_it_all.mp3',
+    image: 'img/tracks (4).jpg',
+    duration: 240,
+    createdAt: '2023-10-24T12:00:00.000Z',
+    album: mockAlbums[3],
+    artist: mockArtists[3],
+    playlists: [],
+    added: '9 дней назад',
+    likes: [],
+  },
+];
+
+export const mockPlaylists: Playlist[] = [
+  {
+    id: 1,
+    name: 'Любимые песни',
+    createdAt: '2023-10-20T12:00:00.000Z',
+    user: 'user1',
+    songs: [mockTracks[0].id.toString()],
+    image: 'img/playlists (1).jpg', 
+  },
+  {
+    id: 2,
+    name: 'Плейлист #1',
+    createdAt: '2023-10-21T12:00:00.000Z',
+    user: 'user1',
+    songs: [],
+    image: 'img/playlists (2).jpg',
+  },
+  {
+    id: 3,
+    name: 'Плейлист #2',
+    createdAt: '2023-10-22T12:00:00.000Z',
+    user: 'user1',
+    songs: [],
+    image: 'img/playlists (3).jpg', 
+  },
+  {
+    id: 4,
+    name: 'Плейлист #3',
+    createdAt: '2023-10-23T12:00:00.000Z',
+    user: 'user1',
+    songs: [],
+    image: 'img/playlists (4).jpg',  
+  },
+];
+
+const mockUser: User = {
+  id: 1,
+  username: 'user1',
+  firstName: 'John',
+  lastName: 'Doe',
+  playlists: mockPlaylists,
+  artistLikes: [],
+  albumLikes: [],
+  songLikes: [mockTracks[0].id.toString()],
+};
+
+export { mockUser };

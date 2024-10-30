@@ -1,0 +1,153 @@
+/* Header.css */
+.header {
+  display: flex;
+}
+
+.header__logo {
+  max-width: 289px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__search {
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex: 1;
+  margin-right: 30px;
+}
+
+.header__search__field {
+  max-width: 1010px;
+  border: none;
+  width: 100%;
+  min-width: 250px;
+  padding: 15px 12px 15px 47px;
+  border-radius: 30px;
+  background-color: var(--color-greybg);
+  font-size: 14px;
+  letter-spacing: .09em;
+  color: var(--color-greytxt);
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: left 15px top 10px;
+}
+
+.header__search__field::placeholder {
+  font-size: 12px;
+}
+
+.header__user {
+  background-color: var(--color-greybg);
+  align-self: center;
+  padding: 5px 13px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  max-width: 246px;
+  width: 100%;
+}
+
+.header__user__img {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  margin-right: 11px;
+}
+
+.header__user__text {
+  margin-right: auto;
+}
+
+/* Медиа-запросы для Header */
+@media (min-width: 1200px) {
+  .header__search__field:hover {
+    opacity: .6;
+  }
+
+  .header__user:hover {
+    opacity: .6;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__logo {
+    padding-left: 46px;
+    padding-right: 46px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__user {
+    margin-left: auto;
+  }
+
+  .header__search {
+    position: absolute;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    transform: translateX(-102%);
+    transition: transform .3s ease-in-out;
+  }
+
+  .header__search.search--active {
+    transform: translateX(0%);
+  }
+
+  .header__search__field {
+    background-color: #fff;
+    box-shadow: 2px 5px 35px -18px;
+    height: 60px;
+    background-position: left 2% center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__logo {
+    padding: 0;
+    margin-right: auto;
+  }
+
+  .header__search {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header__logo svg {
+    width: 115px;
+  }
+
+  .header {
+    padding: 17px 16px;
+  }
+
+  .header__user {
+    font-size: 12px;
+    background-color: transparent;
+    padding: 0;
+    max-width: max-content;
+  }
+
+  .header__user__text {
+    margin: 0;
+  }
+
+  .header__user__svg {
+    display: none;
+  }
+
+  .header__search {
+    left: 0;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

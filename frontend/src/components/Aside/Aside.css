@@ -1,0 +1,47 @@
+/* Aside.css */
+
+.aside {
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 46px 0px;
+  background-color: var(--color-greybg);
+}
+
+.aside-playlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.aside__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.aside__item {
+  margin-bottom: 15px;
+}
+
+.aside__btn {
+}
+
+.aside__btn {
+  width: 100%;
+  padding: 5px 0 5px 30px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: none;
+  font-size: 20px;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.aside__btn-active {
+  background-color: white;
+}

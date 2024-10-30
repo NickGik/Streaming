@@ -1,0 +1,31 @@
+:root {
+    --color-blacktxt: #11253D;
+    --color-greytxt: #A4A4A4;
+    --color-lightgreytxt: #C4C4C4;
+    --color-greybg: #F5F5F5;
+    --color-greyDarkerbg: #E8E8E8;
+    --color-greyBgBtn: #AAAAAA;
+    --color-promo: #FC6D3E;
+    --transition-duration: .3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Circular", sans-serif;
+    color: var(--color-blacktxt);
+    background-color: #ffffff;
+  }
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 30px;
+}
+
+.content-wrap {
+  display: flex;
+}

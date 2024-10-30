@@ -1,0 +1,28 @@
+/* Main.css */
+
+.main {
+  padding: 35px 53px 145px 46px;
+  flex: 1;
+}
+
+.tabs-content {
+  display: none;
+}
+
+.section.section--active {
+  display: block;
+}
+
+.title__h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+/* Медиа-запросы для Main */
+
+@media (max-width: 576px) {
+  .main {
+    padding: 0px 16px 145px 16px;
+    background-color: var(--color-greybg);
+  }
+}
